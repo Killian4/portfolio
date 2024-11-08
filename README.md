@@ -3,7 +3,8 @@
 ## AWS DEV environment
 
 ### Setup
-
-> terraform init
-> terraform plan
-> terraform apply
+```bash
+terraform init
+terraform plan
+terraform apply
+```
