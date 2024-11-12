@@ -8,3 +8,16 @@ data "aws_ami" "server_ami" {
 	}
 
 }
+
+variable "username" {
+	type = string
+	default = "changeme"
+
+}
+
+variable "passwd" {
+	type = string
+	default = "changeme"
+
+}
+
