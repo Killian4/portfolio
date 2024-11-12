@@ -1,0 +1,6 @@
+[ftp]
+18.205.156.59
+[ftp:vars]
+ansible_user=ubuntu
+ansible_become=True
+ansible_become_method="sudo"
