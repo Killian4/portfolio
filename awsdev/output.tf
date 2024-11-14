@@ -10,14 +10,12 @@ resource "local_file" "tf_ansible_vars" {
 
 resource "local_file" "tf_inventory" {
 	content = <<-DOC
-		[ftp]
+		[server]
 		${aws_instance.dev.public_ip}
-		[ftp:vars]
+		[server:vars]
 		ansible_user=${var.username}
-		ansible_password=${var.passwd}
 		ansible_become=True
 		ansible_become_method="sudo"
-		ansible_become_password=${var.passwd}
 		DOC
 	file_permission="0640"
 	filename="./ansible/inventory"
