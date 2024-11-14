@@ -1,0 +1,22 @@
+---
+- name: Create ftp directory in /etc/skel
+  ansible.builtin.file:
+     path: /etc/skel/ftp
+     owner: root
+     group: root
+     state: directory
+     mode: '0710'
+- name: Create a user
+  ansible.builtin.user:
+    name: testuser
+    create_home: true
+    password: '$6$GH0oZX1f.VKT5Ges$qlalmYC.PuTNxrxy.apE2CdcpCuMZW1G6HKidIxqhUn3W9tis4fnOA3XJs5yY92KbaTpKD4zQ4WQoOSLJ1aa./'
+    state: present
+- name: Edit sshd config
+  ansible.builtin.copy:
+    src: sshd_config    
+    dest: /etc/ssh/sshd_config
+    group: root
+    owner: root
+    mode: '0640'
+
