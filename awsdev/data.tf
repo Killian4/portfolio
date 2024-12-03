@@ -8,16 +8,24 @@ data "aws_ami" "server_ami" {
 	}
 
 }
+variable "ansible_username" {
+	type=string
+	default="ubuntu"
+}
 
 variable "username" {
 	type = string
-	default = "changeme"
-
 }
 
-variable "passwd" {
+variable "password_hash" {
 	type = string
-	default = "changeme"
+}
 
+variable "user_ssh_pubkey" {
+	type = string
+}
+
+variable "ansible_ssh_file" {
+	type = string
 }
 

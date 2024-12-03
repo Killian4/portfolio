@@ -1,0 +1,6 @@
+---
+- name: Create ftp directory in /etc/skel
+  ansible.builtin.package:
+    name: vsftpd
+    state: present
+    use: apt
