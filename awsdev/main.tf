@@ -70,7 +70,7 @@ resource "aws_vpc_security_group_egress_rule" "allow_all_out_ipv4" {
 
 resource "aws_key_pair" "sshkey" {
 	key_name = "sshkey"
-	public_key = file("~/.ssh/linode.pub")
+	public_key = file(var.ansible_ssh_file)
 }
 
 resource "aws_instance" "dev" {
