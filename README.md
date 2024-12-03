@@ -2,7 +2,7 @@
 
 ## AWS DEV environment
 
-This is a simply VM spun up through terraform, that uses ansible to configure it to run as a file sharing server. I created this because I wanted a server to share files, and terraform and ansible allows this resource to be prgrammatically created and destroyed at will.
+This is a simple VM spun up through terraform, that uses ansible to configure it to run as a file sharing server. I created this because I wanted a server to share files, and terraform and ansible allows this resource to be prgrammatically created and destroyed at will.
 ### Requirements
 
 You will need [terraform](https://developer.hashicorp.com/terraform/install) and [ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) installed to use this.
